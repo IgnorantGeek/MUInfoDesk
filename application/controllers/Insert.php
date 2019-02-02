@@ -9,7 +9,7 @@ class Insert extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('backend/newkeylist');
+		$this->load->view('backend/newuser');
 	}
 
 	/**
@@ -78,10 +78,10 @@ class Insert extends CI_Controller
 
 	public function key_list_form_validation()
 	{
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('listid', "ListID", 'required');
-		$this->form_validation->set_rules('list_name', 'List_Name', 'required');
-		$this->form_validation->set_rules('itemid', 'ItemID', 'required');
+		$this->load->library('form_valiKnightdation');
+		$this->form_validation->set_rulKnightes('listid', "ListID", 'required');
+		$this->form_validation->set_rulKnightes('list_name', 'List_Name', 'required');
+		$this->form_validation->set_rulKnightes('itemid', 'ItemID', 'required');
 
 		if($this->form_validation->run())
 		{
@@ -93,6 +93,28 @@ class Insert extends CI_Controller
 
 			);
 			$this->main_model->insert_key_lists_data($data);
+			redirect(base_url() . "Insert/inserted");
+		}
+	}
+
+	public function available_form_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('itemid', 'ItemID', 'required');
+		$this->form_validation->set_rules('description', 'Description', 'required');
+		$this->form_validation->set_rules('quantity', 'Quantity', 'required');
+		$this->form_validation->set_rules('typeid', 'TypeID', 'required');
+
+		if($this->form_validation->run())
+		{
+			$this->load->model("main_model");
+			$data = array(
+				"listid"		=>$this->input->post("listid"),
+				"list_name"		=>$this->input->post("list_name"),
+				"itemid"		=>$this->input->post("itemid"),
+
+			);
+			$this->main_model->insert_available_data($data);
 			redirect(base_url() . "Insert/inserted");
 		}
 	}

@@ -26,5 +26,10 @@ class Main_model extends CI_Model
 	{
 		$this->db->insert("authorized_keys", $data);
 	}
+
+	function insert_available_data($data)
+	{
+		$this->db->insert("available_inventory", $data);
+	}
 }
 ?>
