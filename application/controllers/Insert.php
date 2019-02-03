@@ -21,7 +21,7 @@ class Insert extends CI_Controller
 	{
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', "name", 'required');
-		$this->form_validation->set_rules('uid', 'UID', array('required', 'min_length[9]'=>'Please enter 9 digits for University ID', 'max_length[9]'=>'Please enter 9 digits for University ID'));
+		$this->form_validation->set_rules('uid', 'UID', 'required');
 
 		if($this->form_validation->run())
 		{
