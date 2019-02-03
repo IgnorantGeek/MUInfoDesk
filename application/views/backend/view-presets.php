@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class ="topnav">
         <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
-        <a class="active" href="<?php echo base_url()?>Main/viewalldatabase">Previous Page</a>
+        <a class="active" href="<?php echo base_url()?>Main/viewalldatabase">All Databases</a>
         <a href="<?php echo base_url()?>Databaseview/logout">Logout</a>
     </div>
 
