@@ -41,18 +41,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
 
         <div class="form-group">
-            <label>Enter List ID</label>
-            <input type="number" name="listid" class="form-control"/>
+            <label>Enter Item ID</label>
+            <input type="number" name="itemid" class="form-control"/>
             <span><?php echo set_value("name");?></span>
         </div>
         <div class="form-group">
-            <label>Enter The List Name</label>
-            <input type="text" name="list_name" class="form-control"/>
+            <label>Enter Description</label>
+            <input type="text" name="description" class="form-control"/>
             <span class="text-danger"><?php echo form_error("name");?></span>
         </div>
         <div class="form-group">
-            <label>Enter Item ID</label>
-            <input type="number" name="itemid" class="form-control"/>
+            <label>Enter Quantity of Items</label>
+            <input type="number" name="quantity" class="form-control"/>
+            <span><?php echo form_error("name");?></span>
+        </div>
+        <div class="form-group">
+            <label>Enter Type ID</label>
+            <input type="number" name="TypeID" class="form-control"/>
             <span><?php echo form_error("name");?></span>
         </div>
 

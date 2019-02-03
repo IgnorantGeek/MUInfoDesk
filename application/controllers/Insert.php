@@ -109,9 +109,10 @@ class Insert extends CI_Controller
 		{
 			$this->load->model("main_model");
 			$data = array(
-				"listid"		=>$this->input->post("listid"),
-				"list_name"		=>$this->input->post("list_name"),
 				"itemid"		=>$this->input->post("itemid"),
+				"description"	=>$this->input->post("description"),
+				"quantity"		=>$this->input->post("quantity"),
+				"typeid"		=>$this->input->post("typeid"),
 
 			);
 			$this->main_model->insert_available_data($data);
@@ -122,6 +123,7 @@ class Insert extends CI_Controller
 	public function inserted()
 	{
 		$this->index();
+		//test the idea of making custom data insertion functions. (ie available_inserted or something)
 		//need a new way to direct inserted data. How can we have the page say data inserted and still point to the correct page?
 	}
 
