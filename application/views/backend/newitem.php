@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="form-group">
             <label>Enter Type ID</label>
-            <input type="number" name="TypeID" class="form-control"/>
+            <input type="number" name="typeid" class="form-control"/>
             <span><?php echo form_error("name");?></span>
         </div>
 
