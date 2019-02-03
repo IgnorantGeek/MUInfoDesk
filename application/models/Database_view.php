@@ -46,7 +46,7 @@ class Database_view extends CI_Model
 
 	function delete_data_checkout($id)
 	{
-		$this->db->where("itemID", $id);
+		$this->db->where("timeout", $id);
 		$this->db->delete("checked_out_items");
 	}
 

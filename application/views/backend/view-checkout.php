@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><?php echo $row->UID; ?></td>
                     <td><?php echo $row->timeout; ?></td>
                     <td><?php echo $row->timein; ?></td>
-                    <td><a href="#" class="delete_data_checkout" id="<?php echo $row->itemID; ?>">Delete</td>
+                    <td><a href="#" class="delete_data_checkout" id="<?php echo $row->timeout; ?>">Delete</td>
                 </tr>
             <?php
                 }
