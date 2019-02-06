@@ -60,6 +60,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/newitem');
 	}
 
+	public function newitemtype()
+	{
+		$this->load->view('backend/newitemtype');
+	}
+
 
 	/**
 	FRONTEND ONLY

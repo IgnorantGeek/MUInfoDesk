@@ -31,5 +31,10 @@ class Main_model extends CI_Model
 	{
 		$this->db->insert("available_inventory", $data);
 	}
+
+	function insert_item_types_data($data)
+	{
+		$this->db->insert("item_types", $data);
+	}
 }
 ?>

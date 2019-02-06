@@ -120,6 +120,23 @@ class Insert extends CI_Controller
 		}
 	}
 
+	public function item_type_form_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('typeid', 'TypeID', 'required');
+
+		if($this->form_validation->run())
+		{
+			$this->load->model("main_model");
+			$data = array(
+				"typeid"		=>$this->input->post("typeid"),
+				"description"   =>$this->input->post("description"),
+			);
+			$this->main_model->insert_item_types_data($data);
+			redirect(base_url() . "Insert/inserted");
+		}
+	}
+
 	public function inserted()
 	{
 		$this->index();

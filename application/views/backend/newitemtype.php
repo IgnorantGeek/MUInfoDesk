@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New Checkout Entry</title>
+    <title>New Item Type</title>
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
@@ -20,14 +20,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
     <a class="active" href="<?php echo base_url()?>Databaseview/edit_db">Previous Page</a>
-    <a href="<?php echo base_url()?>Databaseview/checkout">View this Database</a>
+    <a href="<?php echo base_url()?>Databaseview/item_types">View this Database</a>
     <a href="<?php echo base_url()?>Databaseview/logout">Logout</a>
 </div>
 
 <div class="container">
-    <h3>New Checkout Entry</h3>
+    <h3>New Item Type</h3>
     <br /><br />
-    <form method="post" action="<?php echo base_url()?>Insert/checkout_form_validation">
+    <form method="post" action="<?php echo base_url()?>Insert/item_type_form_validation">
         <?php
         if($this->uri->segment(2) == "inserted")
         {
@@ -36,19 +36,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         ?>
 
         <div class="form-group">
-            <label>Enter ItemID</label>
-            <input type="number " name="itemid" size ="4" class="form-control"/>
+            <label>Enter TypeID</label>
+            <input type="number " name="typeid" class="form-control"/>
             <span><?php echo form_error("name");?></span>
         </div>
         <div class="form-group">
-            <label>Enter 9-digit University ID</label>
-            <input type="number" name="uid" size="9" class="form-control"/>
+            <label>Enter Type Description</label>
+            <input type="number" name="description" class="form-control"/>
             <span class="text-danger"><?php echo form_error("name");?></span>
-        </div>
-        <div class="form-group">
-            <label>Time Out</label>
-            <input type="time" name="timeout" class="form-control"/>
-            <span><?php echo form_error("name");?></span>
         </div>
 
         <input type="submit" name="insert" value="Insert" class="btn-info"/>
