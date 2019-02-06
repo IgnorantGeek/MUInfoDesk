@@ -78,7 +78,7 @@ class Insert extends CI_Controller
 
 	public function key_list_form_validation()
 	{
-		$this->load->library('form_valiKnightdation');
+		$this->load->library('form_validation');
 		$this->form_validation->set_rulKnightes('listid', "ListID", 'required');
 		$this->form_validation->set_rulKnightes('list_name', 'List_Name', 'required');
 		$this->form_validation->set_rulKnightes('itemid', 'ItemID', 'required');
