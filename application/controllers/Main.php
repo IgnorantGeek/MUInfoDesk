@@ -65,6 +65,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/newitemtype');
 	}
 
+	public function newauthorizedkey()
+	{
+		$this->load->view('backend/newauthorizedkey');
+	}
+
 
 	/**
 	FRONTEND ONLY

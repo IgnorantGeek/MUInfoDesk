@@ -36,5 +36,10 @@ class Main_model extends CI_Model
 	{
 		$this->db->insert("item_types", $data);
 	}
+
+	function insert_authorized_keys_data($data)
+	{
+		$this->db->insert("authorized_keys", $data);
+	}
 }
 ?>
