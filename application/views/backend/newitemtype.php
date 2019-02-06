@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="form-group">
             <label>Enter Type Description</label>
-            <input type="number" name="description" class="form-control"/>
+            <input type="text" name="description" class="form-control"/>
             <span class="text-danger"><?php echo form_error("name");?></span>
         </div>
 
