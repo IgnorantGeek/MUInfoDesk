@@ -151,7 +151,7 @@ class Insert extends CI_Controller
 				"listid"    =>$this->input->post("listid"),
 			);
 			$this->main_model->insert_authorized_keys_data($data);
-			redirect(base_url() . "Insert/inserted");
+			redirect(base_url() . "Insert/auth_key");
 		}
 	}
 
