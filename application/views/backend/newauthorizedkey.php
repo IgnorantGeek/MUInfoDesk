@@ -29,25 +29,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <br /><br />
     <form method="post" action="<?php echo base_url()?>Insert/auth_key_form_validation">
         <?php
-        if($this->uri->segment(2) == "inserted")
+        if($this->uri->segment(1) == "Insert")
         {
             echo '<p class="text-success"> Data Inserted </p>';
         }
         ?>
 
         <div class="form-group">
-            <label>Enter ItemID</label>
-            <input type="number " name="itemid" size ="4" class="form-control"/>
-            <span><?php echo form_error("name");?></span>
-        </div>
-        <div class="form-group">
             <label>Enter 9-digit University ID</label>
             <input type="number" name="uid" size="9" class="form-control"/>
             <span class="text-danger"><?php echo form_error("name");?></span>
         </div>
         <div class="form-group">
-            <label>Time Out</label>
-            <input type="time" name="timeout" class="form-control"/>
+            <label>Enter List ID</label>
+            <input type="number" name="listid" class="form-control"/>
             <span><?php echo form_error("name");?></span>
         </div>
 

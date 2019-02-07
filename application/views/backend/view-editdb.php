@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <a href="<?php echo base_url()?>Main/newcheckout" class="dropbtn">Checked Out Items</a>
         <a href="<?php echo base_url()?>Main/newkeylist" class="dropbtn">Key Lists</a>
         <a href="<?php echo base_url()?>Main/newitem" class="dropbtn">Available Inventory</a>
-        <a href="<?php echo base_url()?>Main/newauthorizedkey" class="dropbtn">Available Keys</a>
+        <a href="<?php echo base_url()?>Main/newauthorizedkey" class="dropbtn">Authorized Keys</a>
         <a href="<?php echo base_url()?>Main/newitemtype" class="dropbtn">New Item Type</a>
     </div>
 

@@ -136,12 +136,36 @@ class Insert extends CI_Controller
 			redirect(base_url() . "Insert/inserted");
 		}
 	}
+	
+	public function auth_key_form_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('uid', 'UID', 'required');
+		$this->form_validation->set_rules('listid', 'ListID', 'required');
+
+		if($this->form_validation->run())
+		{
+			$this->load->model("main_model");
+			$data = array(
+				"uid"		=>$this->input->post("uid"),
+				"listid"    =>$this->input->post("listid"),
+			);
+			$this->main_model->insert_item_types_data($data);
+			redirect(base_url() . "Insert/inserted");
+		}
+	}
 
 	public function inserted()
 	{
 		$this->index();
 		//test the idea of making custom data insertion functions. (ie available_inserted or something)
 		//need a new way to direct inserted data. How can we have the page say data inserted and still point to the correct page?
+	}
+
+	public function auth_key()
+	{
+		//this is an idea for how to get inserted to work. Check that the first part of the uri is "Insert"
+		$this->load->view('backend/newauthorizedkey');
 	}
 
 }
