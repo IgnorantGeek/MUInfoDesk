@@ -27,9 +27,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
     <h3>New User Entry</h3>
     <br /><br />
-    <form method="post" action="<?php echo base_url()?>Insert/form_validation">
+    <form method="post" action="<?php echo base_url()?>Insert/identity_form_validation">
         <?php
-        if($this->uri->segment(2) == "inserted")
+        if($this->uri->segment(2) == "Insert")
         {
             echo '<p class="text-success"> Data Inserted </p>';
         }

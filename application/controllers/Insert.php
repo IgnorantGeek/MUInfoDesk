@@ -9,13 +9,13 @@ class Insert extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('backend/newitemtype');
+		$this->load->view('backend/backendhome');
 	}
 
 	/**
 	Uses Form Validation Library for validating fields. Creates data variable to insert into Identity table. Calls main model to insert data into table.
 	*/
-	public function form_validation()
+	public function identity_form_validation()
 
 
 	{
@@ -35,7 +35,7 @@ class Insert extends CI_Controller
 
 			);
 			$this->main_model->insert_identity_data($data);
-			redirect(base_url() . "Insert/inserted");
+			redirect(base_url() . "Insert/identity");
 
 		}
 		else
@@ -66,7 +66,7 @@ class Insert extends CI_Controller
 
 			);
 			$this->main_model->insert_checkout_data($data);
-			redirect(base_url() . "Insert/inserted");
+			redirect(base_url() . "Insert/checkout");
 
 		}
 		else
@@ -93,7 +93,7 @@ class Insert extends CI_Controller
 
 			);
 			$this->main_model->insert_key_lists_data($data);
-			redirect(base_url() . "Insert/inserted");
+			redirect(base_url() . "Insert/key_list");
 		}
 	}
 
@@ -116,7 +116,7 @@ class Insert extends CI_Controller
 
 			);
 			$this->main_model->insert_available_data($data);
-			redirect(base_url() . "Insert/inserted");
+			redirect(base_url() . "Insert/available");
 		}
 	}
 
@@ -133,7 +133,7 @@ class Insert extends CI_Controller
 				"description"   =>$this->input->post("description"),
 			);
 			$this->main_model->insert_item_types_data($data);
-			redirect(base_url() . "Insert/inserted");
+			redirect(base_url() . "Insert/item_type");
 		}
 	}
 	
@@ -155,17 +155,30 @@ class Insert extends CI_Controller
 		}
 	}
 
-	public function inserted()
-	{
-		$this->index();
-		//test the idea of making custom data insertion functions. (ie available_inserted or something)
-		//need a new way to direct inserted data. How can we have the page say data inserted and still point to the correct page?
-	}
-
 	public function auth_key()
 	{
 		//this is an idea for how to get inserted to work. Check that the first part of the uri is "Insert"
 		$this->load->view('backend/newauthorizedkey');
+	}
+
+	public function item_type()
+	{
+		$this->load->view('backend/newitemtype');
+	}
+
+	public function identity()
+	{
+		$this->load->view('backend/newuser');
+	}
+
+	public function checkout()
+	{
+		$this->load->view('backend/newcheckout');
+	}
+
+	public function key_list()
+	{
+		$this->load->view('backend/newkeylist');
 	}
 
 }
