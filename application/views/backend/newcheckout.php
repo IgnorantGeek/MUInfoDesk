@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <br /><br />
     <form method="post" action="<?php echo base_url()?>Insert/checkout_form_validation">
         <?php
-        if($this->uri->segment(2) == "Insert")
+        if($this->uri->segment(1) == "Insert")
         {
             echo '<p class="text-success"> Data Inserted </p>';
         }
