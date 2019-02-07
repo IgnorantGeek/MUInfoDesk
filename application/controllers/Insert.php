@@ -161,6 +161,11 @@ class Insert extends CI_Controller
 		$this->load->view('backend/newauthorizedkey');
 	}
 
+	public function available()
+	{
+		$this->load->view('backend/newitem');
+	}
+
 	public function item_type()
 	{
 		$this->load->view('backend/newitemtype');
