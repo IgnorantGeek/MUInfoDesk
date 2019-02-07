@@ -150,7 +150,7 @@ class Insert extends CI_Controller
 				"uid"		=>$this->input->post("uid"),
 				"listid"    =>$this->input->post("listid"),
 			);
-			$this->main_model->insert_item_types_data($data);
+			$this->main_model->insert_authorized_keys_data($data);
 			redirect(base_url() . "Insert/inserted");
 		}
 	}
