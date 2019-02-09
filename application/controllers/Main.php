@@ -28,6 +28,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/view-alldatabase');
 	}
 
+	public function editalldatabase()
+	{
+		$this->load->view('backend/view-editdb');
+	}
+
 	//BACKEND DATABASE-VIEW identity
 	public function viewidentity()
 	{

@@ -170,11 +170,6 @@ class Databaseview extends CI_Controller
 		//this doesn't get used right now	
 	}
 
-	public function edit_db()
-	{
-		$this->load->view("backend/view-editdb");
-	}
-
 	public function login()
 	{
 		$data['title'] = 'What up Homie?';
