@@ -272,6 +272,6 @@ class Insert extends CI_Controller
 
 	public function listeditor()
 	{
-		$this->load->view('backend/newpreset');
+		$this->load->view('backend/newlisteditor');
 	}
 }
