@@ -185,7 +185,7 @@ class Insert extends CI_Controller
 				"itemid"	=>$this->input->post("itemid"),
 			);
 			$this->main_model->insert_preset_item_data($data);
-			redirect(base_url() . "Insert/auth_preset");
+			redirect(base_url() . "Insert/preset_item");
 		}
 	}
 
