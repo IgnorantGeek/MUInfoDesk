@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <tr>
                     <td><?php echo $row->UID; ?></td>
                     <td><?php echo $row->listID; ?></td>
-                    <td><?php echo $row->PresetID; ?></td>
+                    <td><?php echo $row->presetID; ?></td>
                     <td><a href="#" class="delete_data_list_editors" id="<?php echo $row->UID; ?>">Delete</td>
                 </tr>
             <?php
