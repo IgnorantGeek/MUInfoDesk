@@ -66,11 +66,6 @@ class Insert extends CI_Controller
 			);
 			$this->main_model->insert_checkout_data($data);
 			redirect(base_url() . "Insert/checkout");
-
-		}
-		else
-		{
-			//if does not pass rules
 		}
 	}
 
