@@ -46,5 +46,10 @@ class Main_model extends CI_Model
 	{
 		$this->db->insert("preset_items", $data);
 	}
+
+	function insert_preset_data($data)
+	{
+		$this->db->insert("presets", $data);
+	}
 }
 ?>

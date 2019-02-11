@@ -189,6 +189,23 @@ class Insert extends CI_Controller
 		}
 	}
 
+	public function preset_form_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('presetid', 'PresetID', 'required');
+
+		if($this->form_validation->run())
+		{
+			$this->load->model("main_model");
+			$data = array(
+				"presetid"		=>$this->input->post("presetid"),
+				"description"	=>$this->input->post("description"),
+			);
+			$this->main_model->insert_preset_data($data);
+			redirect(base_url() . "Insert/preset");
+		}
+	}
+
 	public function auth_key()
 	{
 		$this->load->view('backend/newauthorizedkey');
@@ -227,5 +244,10 @@ class Insert extends CI_Controller
 	public function preset_item()
 	{
 		$this->load->view('backend/newpreset_item');
+	}
+
+	public function preset()
+	{
+		$this->load->view('backend/newpreset');
 	}
 }

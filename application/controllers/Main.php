@@ -85,6 +85,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/newpreset_item');
 	}
 
+	public function newpreset()
+	{
+		$this->load->view('backend/newpreset');
+	}
+
 	/**
 	FRONTEND ONLY
 	Functions for Navigation
