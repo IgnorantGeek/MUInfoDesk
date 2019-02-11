@@ -75,6 +75,15 @@ class Main extends CI_Controller {
 		$this->load->view('backend/newauthorizedkey');
 	}
 
+	public function newauthorizedpreset()
+	{
+		$this->load->view('backend/newauthpreset');
+	}
+
+	public function newpreset_item()
+	{
+		$this->load->view('backend/newpreset_item');
+	}
 
 	/**
 	FRONTEND ONLY

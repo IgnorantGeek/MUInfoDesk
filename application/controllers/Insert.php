@@ -43,8 +43,7 @@ class Insert extends CI_Controller
 			//
 			//if does not pass rules
 			//create some array of the data entered
-			//
-			$this->index();
+			// This is where we would need to send the data back to the new page, then autofill in the fields
 		}
 	}
 
@@ -72,7 +71,6 @@ class Insert extends CI_Controller
 		else
 		{
 			//if does not pass rules
-			$this->index();
 		}
 	}
 
@@ -150,14 +148,49 @@ class Insert extends CI_Controller
 				"uid"		=>$this->input->post("uid"),
 				"listid"    =>$this->input->post("listid"),
 			);
-			$this->main_model->insert_authorized_keys_data($data);
+			$this->main_model->insert_authorized_key_data($data);
 			redirect(base_url() . "Insert/auth_key");
+		}
+	}
+
+	public function auth_preset_form_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('uid', 'UID', 'required');
+		$this->form_validation->set_rules('presetid', 'PresetID', 'required');
+
+		if($this->form_validation->run())
+		{
+			$this->load->model("main_model");
+			$data = array(
+				"uid"		=>$this->input->post("uid"),
+				"presetid"	=>$this->input->post("presetid"),
+			);
+			$this->main_model->insert_authoirzed_preset_data($data);
+			redirect(base_url() . "Insert/auth_preset");
+		}
+	}
+
+	public function preset_item_form_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('presetid', 'PresetID', 'required');
+		$this->form_validation->set_rules('itemid', 'ItemID', 'required');
+
+		if($this->form_validation->run())
+		{
+			$this->load->model("main_model");
+			$data = array(
+				"presetid"	=>$this->input->post("presetid"),
+				"itemid"	=>$this->input->post("itemid"),
+			);
+			$this->main_model->insert_preset_item_data($data);
+			redirect(base_url() . "Insert/auth_preset");
 		}
 	}
 
 	public function auth_key()
 	{
-		//this is an idea for how to get inserted to work. Check that the first part of the uri is "Insert"
 		$this->load->view('backend/newauthorizedkey');
 	}
 
@@ -186,4 +219,13 @@ class Insert extends CI_Controller
 		$this->load->view('backend/newkeylist');
 	}
 
+	public function auth_preset()
+	{
+		$this->load->view('backend/newauthpreset');
+	}
+
+	public function preset_item()
+	{
+		$this->load->view('backend/newpreset_item');
+	}
 }

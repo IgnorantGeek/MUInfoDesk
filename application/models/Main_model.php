@@ -37,9 +37,14 @@ class Main_model extends CI_Model
 		$this->db->insert("item_types", $data);
 	}
 
-	function insert_authorized_keys_data($data)
+	function insert_authorized_preset_data($data)
 	{
-		$this->db->insert("authorized_keys", $data);
+		$this->db->insert("authorized_presets", $data);
+	}
+
+	function insert_preset_item_data($data)
+	{
+		$this->db->insert("preset_items", $data);
 	}
 }
 ?>
