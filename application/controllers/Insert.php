@@ -166,7 +166,7 @@ class Insert extends CI_Controller
 				"uid"		=>$this->input->post("uid"),
 				"presetid"	=>$this->input->post("presetid"),
 			);
-			$this->main_model->insert_authoirzed_preset_data($data);
+			$this->main_model->insert_authorized_preset_data($data);
 			redirect(base_url() . "Insert/auth_preset");
 		}
 	}
