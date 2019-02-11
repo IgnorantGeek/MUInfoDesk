@@ -51,5 +51,10 @@ class Main_model extends CI_Model
 	{
 		$this->db->insert("presets", $data);
 	}
+
+	function insert_list_editor_data($data)
+	{
+		$this->db->insert("list_editors", $data);
+	}
 }
 ?>

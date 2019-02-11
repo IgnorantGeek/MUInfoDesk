@@ -206,6 +206,25 @@ class Insert extends CI_Controller
 		}
 	}
 
+	public function list_editor_form_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('uid', 'UID', 'required');
+		$this->form_validation->set_rules('listid', 'ListID', 'required');
+
+		if($this->form_validation->run())
+		{
+			$this->load->model("main_model");
+			$data = array(
+				"uid"		=>$this->input->post("uid"),
+				"listid"	=>$this->input->post("listid"),
+				"presetid"	=>$this->input->post("presetid"),
+			);
+			$this->main_model->insert_list_editor_data($data);
+			redirect(base_url() . "Insert/listeditor");
+		}
+	}
+
 	public function auth_key()
 	{
 		$this->load->view('backend/newauthorizedkey');
@@ -247,6 +266,11 @@ class Insert extends CI_Controller
 	}
 
 	public function preset()
+	{
+		$this->load->view('backend/newpreset');
+	}
+
+	public function listeditor()
 	{
 		$this->load->view('backend/newpreset');
 	}

@@ -90,6 +90,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/newpreset');
 	}
 
+	public function newlisteditor()
+	{
+		$this->load->view('backend/newlisteditor');
+	}
+
 	/**
 	FRONTEND ONLY
 	Functions for Navigation
