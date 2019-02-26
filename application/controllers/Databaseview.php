@@ -81,10 +81,9 @@ class Databaseview extends CI_Controller
 
 	public function delete_data_authorized_keys()
 	{
-		$id1 = $this->uri->segment(3);
-		$id2 = $this->uri->segment(4);
+		$id = $this->uri->segment(3);
 		$this->load->model("Database_view");
-		$this->Database_view->delete_data_authorized_keys($id1, $id2);
+		$this->Database_view->delete_data_authorized_keys($id);
 		redirect(base_url() . "Databaseview/authorized_keys");
 	}	
 
