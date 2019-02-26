@@ -44,11 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><?php echo $row->listID; ?></td>
                     <td><?php echo $row->list_name; ?></td>
                     <td><?php echo $row->itemID; ?></td>
-<<<<<<< HEAD
-                    <td><a href="#" class="delete_data" id="<?php echo $row->ListID; ?>">Delete</td>
-=======
                     <td><a href="#" class="delete_data_key_lists" id="<?php echo $row->listID; ?>">Delete</td>
->>>>>>> 58c6c895d709c3301fbb947c85b17d42ac60e826
                 </tr>
             <?php
                 }
