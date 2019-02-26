@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <tr>
                     <td><?php echo $row->presetID; ?></td>
                     <td><?php echo $row->itemID; ?></td>
-                    <td><a href="#" class="delete_data_preset_items" id="<?php echo $row->presetID; ?>">Delete</td>
+                    <td><a href="#" class="delete_data_preset_items" id="<?php echo $row->itemID; ?>">Delete</td>
                 </tr>
             <?php
                 }

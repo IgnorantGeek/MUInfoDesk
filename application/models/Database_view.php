@@ -24,8 +24,11 @@ class Database_view extends CI_Model
 		}
 	}
 
-	//the delete functions probably need fixed, I am probably not always working with "UID" table.
-	//need to better understand how the deleting in this api works
+	//need to look into multiparameter delete functions. 
+	//For example, when deleting from List Editors, you might want to delete
+	//one entry for a single person's (UID) access to a list, but leave their 
+	//access to another list. The current implementation deletes all entries with that
+	//UID
 
 	function fetch_identity()
 	{
@@ -68,7 +71,7 @@ class Database_view extends CI_Model
 	}
 
 	function delete_data_key_lists($id){
-		$this->db->where("UID", $id);
+		$this->db->where("ListID", $id);
 		$this->db->delete("available_inventory");
 	}
 
@@ -78,8 +81,14 @@ class Database_view extends CI_Model
 		return $query;
 	}
 
-	function delete_data_authorized_keys($id){
-		$this->db->where("UID", $id);
+	//here is where you might want a two argument delete function. Need to see if the built in
+	//delete functionality accepts 2 inpute deletes. How can we get the echo statement in this view
+	//to echo two values of the row we selected to delete?
+
+	//I have inserted a test feature that would delete an entry based on two parameters. Needs testing. Probably broken
+	function delete_data_authorized_keys($id1, $id2){
+		$this->db->where("UID", $id1);
+		$this->db->where("ListID", $id2);
 		$this->db->delete("authorized_keys");
 	}
 
@@ -101,7 +110,7 @@ class Database_view extends CI_Model
 	}
 
 	function delete_data_presets($id){
-		$this->db->where("UID", $id);
+		$this->db->where("presetID", $id);
 		$this->db->delete("presets");
 	}
 
@@ -112,7 +121,7 @@ class Database_view extends CI_Model
 	}
 
 	function delete_data_preset_items($id){
-		$this->db->where("UID", $id);
+		$this->db->where("itemID", $id);
 		$this->db->delete("preset_items");
 	}
 
@@ -134,7 +143,7 @@ class Database_view extends CI_Model
 	}
 
 	function delete_data_item_types($id){
-		$this->db->where("UID", $id);
+		$this->db->where("typeID", $id);
 		$this->db->delete("item_types");
 	}
 }
