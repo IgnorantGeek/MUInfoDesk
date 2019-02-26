@@ -86,9 +86,8 @@ class Database_view extends CI_Model
 	//to echo two values of the row we selected to delete?
 
 	//I have inserted a test feature that would delete an entry based on two parameters. Needs testing. Probably broken
-	function delete_data_authorized_keys($id1, $id2){
-		$this->db->where("UID", $id1);
-		$this->db->where("ListID", $id2);
+	function delete_data_authorized_keys($id){
+		$this->db->where("UID", $id);
 		$this->db->delete("authorized_keys");
 	}
 

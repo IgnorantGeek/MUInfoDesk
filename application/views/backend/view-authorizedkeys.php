@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <tr>
                     <td><?php echo $row->UID; ?></td>
                     <td><?php echo $row->listID; ?></td>
-                    <td><a href="#" class="delete_data_authorized_keys" id1="<?php echo $row->UID; ?>" id2="<?php echo $row->ListID; ?>">Delete</td>
+                    <td><a href="#" class="delete_data_authorized_keys" id="<?php echo $row->UID; ?>">Delete</td>
                 </tr>
             <?php
                 }
