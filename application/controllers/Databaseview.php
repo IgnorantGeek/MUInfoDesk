@@ -170,11 +170,6 @@ class Databaseview extends CI_Controller
 		//this doesn't get used right now	
 	}
 
-	public function edit_db()
-	{
-		$this->load->view("backend/view-editdb");
-	}
-
 	public function login()
 	{
 		$data['title'] = 'What up Homie?';
@@ -202,7 +197,7 @@ class Databaseview extends CI_Controller
 				redirect(base_url() . 'Main/backendhome');
 			}
 			if($this->Database_view->can_login($username, $password) == false){
-				$this->session->set_flashdata('error', 'Invalid username or password. If problem still persists, please contact an ITAV personnel');
+				$this->session->set_flashdata('error', 'Invalid username or password. If problem persists, please contact an ITAV personnel');
 				redirect(base_url() . 'Databaseview/login');
 			}
 		}

@@ -28,6 +28,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/view-alldatabase');
 	}
 
+	public function editalldatabase()
+	{
+		$this->load->view('backend/view-editdb');
+	}
+
 	//BACKEND DATABASE-VIEW identity
 	public function viewidentity()
 	{
@@ -57,9 +62,38 @@ class Main extends CI_Controller {
 
 	public function newitem()
 	{
-		$this->load->view('backend/item');
+		$this->load->view('backend/newitem');
 	}
 
+	public function newitemtype()
+	{
+		$this->load->view('backend/newitemtype');
+	}
+
+	public function newauthorizedkey()
+	{
+		$this->load->view('backend/newauthorizedkey');
+	}
+
+	public function newauthorizedpreset()
+	{
+		$this->load->view('backend/newauthpreset');
+	}
+
+	public function newpreset_item()
+	{
+		$this->load->view('backend/newpreset_item');
+	}
+
+	public function newpreset()
+	{
+		$this->load->view('backend/newpreset');
+	}
+
+	public function newlisteditor()
+	{
+		$this->load->view('backend/newlisteditor');
+	}
 
 	/**
 	FRONTEND ONLY

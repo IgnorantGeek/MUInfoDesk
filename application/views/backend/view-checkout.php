@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class ="topnav">
         <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
-        <a class="active" href="<?php echo base_url()?>Main/viewalldatabase">Previous Page</a>
+        <a class="active" href="<?php echo base_url()?>Main/viewalldatabase">All Databases</a>
         <a href="<?php echo base_url()?>Databaseview/logout">Logout</a>
     </div>
 
@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><?php echo $row->UID; ?></td>
                     <td><?php echo $row->timeout; ?></td>
                     <td><?php echo $row->timein; ?></td>
-                    <td><a href="#" class="delete_data_checkout" id="<?php echo $row->itemID; ?>">Delete</td>
+                    <td><a href="#" class="delete_data_checkout" id="<?php echo $row->timeout; ?>">Delete</td>
                 </tr>
             <?php
                 }

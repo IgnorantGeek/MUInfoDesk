@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="topnav">
 
     <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
-    <a href="<?php echo base_url()?>Databaseview/edit_db">Previous Page</a>
+    <a href="<?php echo base_url()?>Main/editalldatabase">Previous Page</a>
     <a href="<?php echo base_url()?>Databaseview/identity">View This Database</a>
     <a href="<?php echo base_url()?>Databaseview/logout">Logout</a>
 </div>
@@ -27,9 +27,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
     <h3>New User Entry</h3>
     <br /><br />
-    <form method="post" action="<?php echo base_url()?>Insert/form_validation">
+    <form method="post" action="<?php echo base_url()?>Insert/identity_form_validation">
         <?php
-        if($this->uri->segment(2) == "inserted")
+        if($this->uri->segment(1) == "Insert")
         {
             echo '<p class="text-success"> Data Inserted </p>';
         }

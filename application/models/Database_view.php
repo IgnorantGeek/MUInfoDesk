@@ -49,7 +49,7 @@ class Database_view extends CI_Model
 
 	function delete_data_checkout($id)
 	{
-		$this->db->where("itemID", $id);
+		$this->db->where("timeout", $id);
 		$this->db->delete("checked_out_items");
 	}
 
@@ -71,8 +71,13 @@ class Database_view extends CI_Model
 	}
 
 	function delete_data_key_lists($id){
+<<<<<<< HEAD
 		$this->db->where("ListID", $id);
 		$this->db->delete("available_inventory");
+=======
+		$this->db->where("listID", $id);
+		$this->db->delete("key_lists");
+>>>>>>> 58c6c895d709c3301fbb947c85b17d42ac60e826
 	}
 
 	function fetch_authorized_keys()

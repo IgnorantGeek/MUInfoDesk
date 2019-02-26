@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New User</title>
+    <title>New Checkout Entry</title>
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="topnav">
 
     <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
-    <a class="active" href="<?php echo base_url()?>Databaseview/edit_db">Previous Page</a>
+    <a class="active" href="<?php echo base_url()?>Main/editalldatabase">Previous Page</a>
     <a href="<?php echo base_url()?>Databaseview/checkout">View this Database</a>
     <a href="<?php echo base_url()?>Databaseview/logout">Logout</a>
 </div>
@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <br /><br />
     <form method="post" action="<?php echo base_url()?>Insert/checkout_form_validation">
         <?php
-        if($this->uri->segment(2) == "inserted")
+        if($this->uri->segment(1) == "Insert")
         {
             echo '<p class="text-success"> Data Inserted </p>';
         }

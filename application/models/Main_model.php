@@ -26,5 +26,35 @@ class Main_model extends CI_Model
 	{
 		$this->db->insert("authorized_keys", $data);
 	}
+
+	function insert_available_data($data)
+	{
+		$this->db->insert("available_inventory", $data);
+	}
+
+	function insert_item_types_data($data)
+	{
+		$this->db->insert("item_types", $data);
+	}
+
+	function insert_authorized_preset_data($data)
+	{
+		$this->db->insert("authorized_presets", $data);
+	}
+
+	function insert_preset_item_data($data)
+	{
+		$this->db->insert("preset_items", $data);
+	}
+
+	function insert_preset_data($data)
+	{
+		$this->db->insert("presets", $data);
+	}
+
+	function insert_list_editor_data($data)
+	{
+		$this->db->insert("list_editors", $data);
+	}
 }
 ?>
