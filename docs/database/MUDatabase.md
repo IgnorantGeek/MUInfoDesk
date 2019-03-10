@@ -1,9 +1,5 @@
 <!--
-this is where we will put information about the database we use for the key checkout system. What will we want to know?
-Probably want to list the type of DB we are using (mySQL), the name of the database (ItemCheckout) then all the tables in 
-that db. Need descriptions of each db and explanation of what they are for. Probably want to list the fields of each DB and 
-indicate where primary keys vs foreign keys are. Maybe include a link to readings about primary and foreign keys. Give  
-descriptions of what the fields do.
+Fix the formatting for table parameter descriptions
 -->
 
 # Memorial Union Key Checkout System Database
