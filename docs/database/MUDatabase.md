@@ -19,10 +19,10 @@ The name of the MariaDB instance is 'ItemCheckout'. the database has 10 tables w
 
 Contains the list of users that are allowed to checkout any given key. 
 
-    | Parameter | Description                                      |
-    | :-------: | -----------                                      |
-    |    UID    | University ID of the user.                       |
-    | listID    | ID of the key list that this user has access to. |
+| Parameter | Description                                      |
+| :-------: | -----------                                      |
+|    UID    | University ID of the user.                       |
+| listID    | ID of the key list that this user has access to. |
 
 ### Table 2: Authorized Presets
 
