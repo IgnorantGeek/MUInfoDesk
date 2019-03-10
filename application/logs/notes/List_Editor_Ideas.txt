@@ -1,0 +1,6 @@
+Idea for the list editor logic. When an editor wants to edit access of a certain key list or preset list for a certain user,
+the page would pull from the list_editors table and present the lists and presets that they are allowed to edit. The editor would
+select the list or preset that he/she wants to edit, and it would take it to a form submission page. That page would then prompt the
+editor to enter the UID of the user it would like to add or remove access for, and then insert/remove that entry to the authorized_keys
+or authorized_presets table with the list ID specified on the previous page. Seems like an easy way for non techies to edit the tables
+that they have access to.

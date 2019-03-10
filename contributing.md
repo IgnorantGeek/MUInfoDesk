@@ -25,7 +25,8 @@ essentially the [Allman indent style](https://en.wikipedia.org/wiki/Indent_style
 
 ### Documentation
 
-If you change anything that requires a change to documentation then you will need to add it. New classes, methods, parameters, changing default values, etc are all things that will require a change to documentation. The change-log must also be updated for every change. Also PHPDoc blocks must be maintained.
+If you change anything that requires a change to documentation then you will need to add it. New classes, methods, parameters, changing default values, etc are all things that will require a change to documentation. Also PHPDoc blocks must be maintained. To read the documentation for this
+repository, see the docs folder for information on database organization and app structure specific to this project.
 
 ### Compatibility
 

@@ -24,11 +24,8 @@ class Database_view extends CI_Model
 		}
 	}
 
-	//need to look into multiparameter delete functions. 
-	//For example, when deleting from List Editors, you might want to delete
-	//one entry for a single person's (UID) access to a list, but leave their 
-	//access to another list. The current implementation deletes all entries with that
-	//UID
+	//Need to add a column to all tables to identify the row number. Just need to assign unique ID's to each
+	//row to use for row deletion. Not sure how to make it so SQL auto fills in the row numbers.
 
 	function fetch_identity()
 	{
@@ -81,11 +78,6 @@ class Database_view extends CI_Model
 		return $query;
 	}
 
-	//here is where you might want a two argument delete function. Need to see if the built in
-	//delete functionality accepts 2 inpute deletes. How can we get the echo statement in this view
-	//to echo two values of the row we selected to delete?
-
-	//I have inserted a test feature that would delete an entry based on two parameters. Needs testing. Probably broken
 	function delete_data_authorized_keys($id){
 		$this->db->where("UID", $id);
 		$this->db->delete("authorized_keys");

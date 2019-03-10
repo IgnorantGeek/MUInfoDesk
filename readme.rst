@@ -18,6 +18,13 @@ This repo contains in-development code for future releases. To download the
 latest stable release please visit the `CodeIgniter Downloads
 <https://codeigniter.com/download>`_ page.
 
+*****************************
+Web Application Documentation
+*****************************
+
+For information on the Memorial Union Web Checkout System, see the docs folder
+of this repository.
+
 **************************
 Changelog and New Features
 **************************
