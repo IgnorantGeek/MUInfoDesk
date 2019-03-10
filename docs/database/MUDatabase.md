@@ -19,21 +19,21 @@ please contact MU Technology Services personnel.
 
 The name of the MariaDB instance is 'ItemCheckout'. the database has 10 tables which are labeled as follows.
 
-### Table: Authorized Keys
+### Table 1: Authorized Keys
 
 Contains the list of users that are allowed to checkout any given key. 
     Parameters:
         UID: University ID of the user.
         listID: ID of the key list that this user has access to.
 
-### Table: Authorized Presets
+### Table 2: Authorized Presets
 
 Contains the list of users that are allowed to access a given preset.
     Parameters:
         UID: University ID of the user.
         presetID: ID of the preset this user has access to.
 
-### Table: Available Inventory
+### Table 3: Available Inventory
 
 Contains the list of items that are available to be checked out.
     Parameters:
@@ -42,7 +42,7 @@ Contains the list of items that are available to be checked out.
         Quantity: The number of items available.
         TypeID: The ID that identifies what type of item this is.
 
-### Table: Checked Out Items
+### Table 4: Checked Out Items
 
 Contains the list of items that are currently checked out by a user.
     Parameters:
@@ -51,7 +51,7 @@ Contains the list of items that are currently checked out by a user.
         timeout: The timestamp of when this item was checked out.
         timein: The timestamp for when this item has been returned.
 
-### Table: Identity
+### Table 5: Identity
 
 Contains the list of users that are allowed to checkout some item.
     Parameters:
@@ -62,14 +62,14 @@ Contains the list of users that are allowed to checkout some item.
         username: The username of this user for backend login.
         password: The password of this user for backend login.
 
-### Table: Item Types
+### Table 6: Item Types
 
 Contains the list of all item types.
     Parameters:
         typeID: The ID of the specified item type.
         Description: A short description of the item type.
 
-### Table: Key Lists
+### Table 7: Key Lists
 
 Contains the list of all keys that can be checked out at the Information Desk.
     Parameters:
@@ -77,7 +77,7 @@ Contains the list of all keys that can be checked out at the Information Desk.
         list_name: The name of this key list.
         itemID: The key(s) associated with this key list.
 
-### Table:  List Editors
+### Table 8: List Editors
 
 Contains the list of the users who are allowed to edit both the Authorized Keys table and the Authorized Presets table.
     Parameters:
@@ -85,14 +85,14 @@ Contains the list of the users who are allowed to edit both the Authorized Keys 
         listID: The ID of the list that this user is allowed to edit.
         presetID: The ID of the preset that this user is allowed to edit.
 
-### Table: Presets
+### Table 9: Presets
 
 Contains the list of presets for frontend checkout sessions.
     Parameters:
         presetID: The ID of this preset.
         Description: A short description of this preset.
 
-### Table Preset Items
+### Table 10: Preset Items
 
 Contains the list of the items that are associated with each preset.
     Parameters:
