@@ -28,27 +28,32 @@ Contains the list of users that are allowed to checkout any given key.
 
 Contains the list of users that are allowed to access a given preset.
 
-    - Parameters:
-        - UID: University ID of the user.
-        - presetID: ID of the preset this user has access to.
+| Parameter | Description                                      |
+| :-------: | -----------                                      |
+|    UID    | University ID of the user.                       |
+| presetID  | ID of the preset this user has access to.        |
 
 ### Table 3: Available Inventory
 
 Contains the list of items that are available to be checked out.
-    Parameters:
-        itemID: The ID of the specified item.
-        Description: A short description of the item.
-        Quantity: The number of items available.
-        TypeID: The ID that identifies what type of item this is.
+
+| Parameter   | Description                                      |
+| :---------: | -----------                                      |
+| itemID      | The ID of the specified item.                    |
+| Description | A short description of the item.                 |
+| Quantity    | The number of items available                    |
+| typeID      | The ID that identifies what type of item this is |
 
 ### Table 4: Checked Out Items
 
 Contains the list of items that are currently checked out by a user.
-    Parameters:
-        itemID: The ID of the specified item.
-        UID: University ID of the user who checked out this item.
-        timeout: The timestamp of when this item was checked out.
-        timein: The timestamp for when this item has been returned.
+
+| Parameter   | Description                                         |
+| :---------: | ------------                                        |
+| itemID      | The ID of the specified item.                       |
+| UID         | University ID of the user who checked out this item.|
+| timeout     | The timestamp of when this item was checked out.    |
+| timein      | The timestamp for when this item has been returned. |
 
 ### Table 5: Identity
 
