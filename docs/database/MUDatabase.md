@@ -27,6 +27,7 @@ Contains the list of users that are allowed to checkout any given key.
 ### Table 2: Authorized Presets
 
 Contains the list of users that are allowed to access a given preset.
+
     - Parameters:
         - UID: University ID of the user.
         - presetID: ID of the preset this user has access to.
