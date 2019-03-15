@@ -1,7 +1,0 @@
-Delete Issue:
-    There is an issue when deleteing from certain tables. If there will be multiple entries of the same field (UID, listID), when you delete an entry
-    it deletes all entries with that value. We need to fix the delete functions so that, in certain scenarios, they take two arguments and delete the 
-    entry with those two arguments.
-    Another idea would be to give each row a unique row id and then pass the row id to the delete function. Then we could essentially have one delete function
-    in DatabaseView controller. Would be easier to use the delete functions already in place and modify them to delete the correct rowID. Need to modify the SQL
-    Tables to get that to work

@@ -1,0 +1,7 @@
+Tables where delete functions don't work:
+    Key Lists
+    Authorized Keys
+    Authorized Presets
+
+These tables allow multiple entries for multiple fields. For example: one UID might have access to several key lists, and one key list 
+might be accessed by several people so passing either field into a delete function will result in more than one deleted value.
